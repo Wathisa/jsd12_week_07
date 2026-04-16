@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Change Name</title>
+
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #f3f4f6;
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        text-align: center;
+        background: white;
+        padding: 40px;
+        border-radius: 16px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        font-size: 40px;
+        margin-bottom: 20px;
+        transition: 0.3s;
+      }
+
+      button {
+        padding: 12px 20px;
+        border: none;
+        border-radius: 10px;
+        background: #ec4899;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.2s;
+      }
+
+      button:hover {
+        background: #db2777;
+      }
+
+      button:disabled {
+        background: #9ca3af;
+        cursor: not-allowed;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1 id="jsdTag">JSD12</h1>
+
+      <button id="changName" onclick="changName()">
+        กดเพื่อเปลี่ยนชื่อกับเพิ่ม css คูลๆ
+      </button>
+    </div>
+
+    <script>
+      function changName() {
+        const title = document.getElementById("jsdTag");
+
+        title.style.color = "pink";
+        title.style.fontWeight = "bold";
+        title.textContent = "Sign";
+
+        document.querySelector("button").disabled = true;
+      }
+    </script>
+  </body>
+</html>
