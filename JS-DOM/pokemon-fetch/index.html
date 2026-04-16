@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Pokemon Fetch</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      h1 {
+        font-size: 40px;
+        font-weight: 700;
+        color: #ba475c;
+        margin-bottom: 10px;
+        text-align: center;
+        letter-spacing: 1px;
+      }
+
+      .button-group {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      button {
+        padding: 10px 16px;
+        border: none;
+        border-radius: 8px;
+        font-size: 14px;
+        cursor: pointer;
+        transition: 0.2s;
+        margin-right: 8px;
+      }
+
+      #addBtn {
+        background-color: #22c55e;
+        color: white;
+      }
+
+      #addBtn:hover {
+        background-color: #16a34a;
+      }
+
+      #removeBtn {
+        background-color: #ef4444;
+        color: white;
+      }
+
+      #removeBtn:hover {
+        background-color: #dc2626;
+      }
+
+      #pokemon-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+
+      .card {
+        width: 120px;
+        padding: 12px;
+        background: #fff0f6;
+        color: #db2777;
+        border-radius: 12px;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: 0.2s;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+      }
+
+      .card img {
+        width: 80px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Fetch Data Example</h1>
+
+    <div id="pokemon-container"></div>
+
+    <div class="button-group">
+      <button id="addBtn">Add Random Pokemon</button>
+      <button id="removeBtn">Remove Pokemon</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
