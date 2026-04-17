@@ -58,7 +58,7 @@ body {
   width: 250px;
   height: 250px;
   background-color: transparent;
-  border: 4px dashed #adb5bd;
+  border: 4px solid #f48fb1;
   border-radius: 50%;
   padding: 0;
   cursor: pointer;
@@ -174,7 +174,39 @@ body {
 /* --- ใส่ภาพพื้นหลังให้กล่องพลัง --- */
 /* พลังสารเคมี X */
 #buyUpgrade1 {
-  background-image: url("chemical-x.png");
+  background-image: url("power-1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* พลังคฑาแห่งดวงดาว */
+#buyUpgrade2 {
+  background-image: url("power-2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* พลังแมวเหมียวลูน่า */
+#buyUpgrade3 {
+  background-image: url("power-3.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* พลังโคลว์การ์ด */
+#buyUpgrade4 {
+  background-image: url("power-4.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* พลังมิตรภาพ */
+#buyUpgrade5 {
+  background-image: url("power-5.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
