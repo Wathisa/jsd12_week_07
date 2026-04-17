@@ -1,120 +1,91 @@
 <!doctype html>
-<html lang="en">
+<html lang="th">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SW: Empire Strike Click</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Magical Girls Alliance</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="bg-grey text-black font-sans h-screen overflow-hidden">
-    <div class="grid grid-cols-1 md:grid-cols-3 h-full">
-      <div
-        class="flex flex-col items-center justify-center p-8 border-r-2 border-gray-300"
-      >
-        <div class="text-center mb-12">
-          <p class="text-sm text-gray-500 uppercase">Progress</p>
-          <h1 class="text-5xl font-bold mb-2">
-            <span id="score-display">0</span> %
-          </h1>
-          <p class="text-sm text-gray-600">
-            Rate: <span id="cps-display">0</span> / sec
-          </p>
+  <body>
+    <div class="dashboard">
+      <div class="column left-col">
+        <div class="progress-section">
+          <h2>✨ พลังเวทแห่งจักรวาล ✨</h2>
+          <h1 id="scoreDisplay">0</h1>
+          <p>อัตราการผลิต: <span id="rateDisplay">0</span> / วินาที</p>
         </div>
 
-        <div
-          class="relative w-80 h-80 flex items-center justify-center border-2 border-dashed border-gray-300 rounded-lg p-4"
-        >
-          <span class="absolute top-2 left-2 text-xs text-gray-400"
-            >#orbit-container</span
-          >
-          <div
-            id="orbit-container"
-            class="absolute inset-0 pointer-events-none"
-          ></div>
-
-          <button
-            id="planet-btn"
-            class="w-48 h-48 bg-gray-100 border-2 border-gray-400 rounded-full hover:bg-gray-200 active:bg-gray-300 flex items-center justify-center cursor-pointer z-10"
-          >
-            <span class="font-bold text-gray-500"
-              >TARGET<br />(CLICK HERE)</span
-            >
+        <div class="target-container">
+          <button id="clickButton" class="target-btn">
+            <strong>คทาจันทร์เสี้ยว</strong><br />
+            (คลิกร่ายมนต์!)
           </button>
         </div>
       </div>
 
-      <div class="p-6 border-r-2 border-gray-300 bg-gray-50 overflow-y-auto">
-        <h2 class="text-lg font-bold mb-4 border-b-2 border-gray-300 pb-2">
-          Command Center
-        </h2>
+      <div class="column middle-col">
+        <h2>สมาพันธ์สาวน้อยเวทมนตร์</h2>
+        <div class="status-box">
+          <p>พลังเวทต่อการร่ายมนต์ 1 ครั้ง</p>
+          <h3 id="clickPowerDisplay">1 หน่วย / คลิก</h3>
+        </div>
+      </div>
 
-        <div class="space-y-4">
-          <div class="border-2 border-gray-300 p-4 bg-white">
-            <p class="text-xs text-gray-500 uppercase">Click Power</p>
-            <p class="text-xl font-bold">
-              <span id="power-display">1</span> % / Click
-            </p>
+      <div class="column right-col">
+        <h2>อัปเกรดพลัง</h2>
+
+        <button id="buyUpgrade1" class="upgrade-btn">
+          <div class="upgrade-info">
+            <strong>1. สารเคมี X (Powerpuff)</strong>
+            <p>+1 พลังร่ายมนต์ (ต่อคลิก)</p>
           </div>
-        </div>
-      </div>
+          <div class="upgrade-cost">
+            ใช้: <span id="cost1">20</span> พลังเวท
+          </div>
+        </button>
 
-      <div class="p-6 overflow-y-auto bg-gray-100">
-        <h2 class="text-lg font-bold mb-4 border-b-2 border-gray-300 pb-2">
-          Deploy Forces
-        </h2>
+        <button id="buyUpgrade2" class="upgrade-btn">
+          <div class="upgrade-info">
+            <strong>2. เคโระจังหิวขนม (Sakura)</strong>
+            <p>+1 ออโต้ / วินาที</p>
+          </div>
+          <div class="upgrade-cost">
+            ใช้: <span id="cost2">65</span> พลังเวท
+          </div>
+        </button>
 
-        <div class="space-y-3" id="store-container">
-          <button
-            id="buy-stormtrooper-btn"
-            class="w-full flex items-center justify-between p-4 bg-white border-2 border-gray-300 hover:border-gray-500 hover:bg-gray-50 text-left"
-          >
-            <div>
-              <h3 class="font-bold">1. Stormtrooper</h3>
-              <p class="text-xs text-gray-600">+1 Click Power</p>
-            </div>
-            <div class="text-right">
-              <p class="font-bold">
-                Cost: <span id="stormtrooper-cost">15</span>
-              </p>
-              <p class="text-xs text-gray-500">
-                Owned: <span id="stormtrooper-owned">0</span>
-              </p>
-            </div>
-          </button>
+        <button id="buyUpgrade3" class="upgrade-btn">
+          <div class="upgrade-info">
+            <strong>3. แมวลูน่าช่วยจำ (Sailor Moon)</strong>
+            <p>+5 ออโต้ / วินาที</p>
+          </div>
+          <div class="upgrade-cost">
+            ใช้: <span id="cost3">200</span> พลังเวท
+          </div>
+        </button>
 
-          <button
-            id="buy-tie-btn"
-            class="w-full flex items-center justify-between p-4 bg-white border-2 border-gray-300 hover:border-gray-500 hover:bg-gray-50 text-left"
-          >
-            <div>
-              <h3 class="font-bold">2. TIE Fighter</h3>
-              <p class="text-xs text-gray-600">+1 Auto / sec</p>
-            </div>
-            <div class="text-right">
-              <p class="font-bold">Cost: <span id="tie-cost">100</span></p>
-              <p class="text-xs text-gray-500">
-                Owned: <span id="tie-owned">0</span>
-              </p>
-            </div>
-          </button>
+        <button id="buyUpgrade4" class="upgrade-btn">
+          <div class="upgrade-info">
+            <strong>4. โมโจ โจโจ้ (โดนบังคับช่วย)</strong>
+            <p>+20 ออโต้ / วินาที</p>
+          </div>
+          <div class="upgrade-cost">
+            ใช้: <span id="cost4">800</span> พลังเวท
+          </div>
+        </button>
 
-          <button
-            id="buy-atat-btn"
-            class="w-full flex items-center justify-between p-4 bg-white border-2 border-gray-300 hover:border-gray-500 hover:bg-gray-50 text-left"
-          >
-            <div>
-              <h3 class="font-bold">3. AT-AT Walker</h3>
-              <p class="text-xs text-gray-600">+5 Auto / sec</p>
-            </div>
-            <div class="text-right">
-              <p class="font-bold">Cost: <span id="atat-cost">500</span></p>
-              <p class="text-xs text-gray-500">
-                Owned: <span id="atat-owned">0</span>
-              </p>
-            </div>
-          </button>
-        </div>
+        <button id="buyUpgrade5" class="upgrade-btn">
+          <div class="upgrade-info">
+            <strong>5. พลังมิตรภาพทะลุมิติ!</strong>
+            <p>+100 ออโต้ / วินาที</p>
+          </div>
+          <div class="upgrade-cost">
+            ใช้: <span id="cost5">2500</span> พลังเวท
+          </div>
+        </button>
       </div>
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
