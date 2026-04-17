@@ -12,8 +12,8 @@ body {
 
 .dashboard {
   display: flex;
-  gap: 20px;
-  max-width: 1200px;
+  gap: 10px;
+  max-width: 1400px;
   margin: 0 auto;
   height: 90vh;
 }
@@ -25,7 +25,7 @@ body {
   border-radius: 12px;
   padding: 20px;
   box-shadow: 0 4px 10px rgba(233, 30, 99, 0.1);
-  overflow-y: auto; /* เผื่อปุ่มเยอะเกินหน้าจอ จะได้เลื่อนเมาส์ลงมาดูได้ */
+  overflow-y: auto;
 }
 
 /* --- ตกแต่งคอลัมน์ซ้าย --- */
@@ -53,24 +53,66 @@ body {
   align-items: center;
 }
 
+/* --- ส่วนปุ่ม Sailor moon --- */
 .target-btn {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
+  background-color: transparent;
+  border: 4px dashed #adb5bd;
   border-radius: 50%;
-  background-color: #fff0f5;
-  border: 4px solid #f06292;
-  font-size: 18px;
-  color: #c2185b;
+  padding: 0;
   cursor: pointer;
-  transition: all 0.1s;
+  transition: transform 0.1s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* --- ส่วนรูปภาพด้านในปุ่ม --- */
+.target-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* --- ปุ่มเด้งตอนเอาเมาส์ชี้ --- */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.target-btn:hover {
+  /* เรียกใช้ pulse */
+  animation: pulse 0.5s ease-in-out;
 }
 
 .target-btn:active {
-  transform: scale(0.95);
-  background-color: #f8bbd0;
+  animation: none; /* สั่งปิดแอนิเมชันตอนกด */
+  transform: scale(0.95) !important;
 }
 
 /* --- ตกแต่งคอลัมน์กลาง --- */
+.middle-col {
+  text-align: center;
+}
+
+.middle-col h2 {
+  margin-bottom: 5px;
+}
+
+.middle-col h3 {
+  margin-top: 0px;
+  color: #666;
+}
+
 .status-box {
   border: 2px solid #f8bbd0;
   padding: 15px;
@@ -80,6 +122,11 @@ body {
 }
 
 /* --- ตกแต่งคอลัมน์ขวา --- */
+.right-col {
+  flex: 1.8;
+  text-align: center;
+}
+
 .upgrade-btn {
   width: 100%;
   display: flex;
@@ -87,7 +134,7 @@ body {
   align-items: center;
   background-color: white;
   border: 2px solid #f8bbd0;
-  padding: 15px;
+  padding: 30px 15px 30px 150px;
   border-radius: 8px;
   margin-bottom: 15px;
   cursor: pointer;
@@ -122,4 +169,13 @@ body {
 
 .upgrade-btn:disabled .upgrade-cost {
   color: #aaa;
+}
+
+/* --- ใส่ภาพพื้นหลังให้กล่องพลัง --- */
+/* พลังสารเคมี X */
+#buyUpgrade1 {
+  background-image: url("chemical-x.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
