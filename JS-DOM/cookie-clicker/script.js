@@ -19,7 +19,7 @@ const clickButton = document.getElementById("clickButton");
 function updateUI() {
   scoreDisplay.innerText = score;
   rateDisplay.innerText = autoRate;
-  clickPowerDisplay.innerText = `${clickPower} หน่วย / คลิก`;
+  clickPowerDisplay.innerText = `${clickPower} power / click`;
 
   // อัปเดตราคาบนปุ่ม
   document.getElementById("cost1").innerText = cost1;
@@ -36,13 +36,13 @@ function updateUI() {
   document.getElementById("buyUpgrade5").disabled = score < cost5;
 }
 
-// ระบบคลิกคทาเซเลอร์มูนนน
+// ระบบคลิกปุ่มเล่นเกม
 clickButton.addEventListener("click", () => {
   score += clickPower;
   updateUI();
 });
 
-// อัปเกรด1 สารเคมี X
+// อัปเกรด1
 document.getElementById("buyUpgrade1").addEventListener("click", () => {
   if (score >= cost1) {
     score -= cost1;
@@ -52,7 +52,7 @@ document.getElementById("buyUpgrade1").addEventListener("click", () => {
   }
 });
 
-// อัปเกรด2: คฑาแห่งดวงดาว
+// อัปเกรด2
 document.getElementById("buyUpgrade2").addEventListener("click", () => {
   if (score >= cost2) {
     score -= cost2;
@@ -62,7 +62,7 @@ document.getElementById("buyUpgrade2").addEventListener("click", () => {
   }
 });
 
-// อัปเกรด3 แมวเหมียวลูน่า
+// อัปเกรด3
 document.getElementById("buyUpgrade3").addEventListener("click", () => {
   if (score >= cost3) {
     score -= cost3;
@@ -72,7 +72,7 @@ document.getElementById("buyUpgrade3").addEventListener("click", () => {
   }
 });
 
-// อัปเกรด4 โคลว์การ์ด
+// อัปเกรด4
 document.getElementById("buyUpgrade4").addEventListener("click", () => {
   if (score >= cost4) {
     score -= cost4;
@@ -82,7 +82,7 @@ document.getElementById("buyUpgrade4").addEventListener("click", () => {
   }
 });
 
-// อัปเกรด5 พลังมิตรภาพทะลุมิติ
+// อัปเกรด5
 document.getElementById("buyUpgrade5").addEventListener("click", () => {
   if (score >= cost5) {
     score -= cost5;

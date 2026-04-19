@@ -3,75 +3,78 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <title>Magical Girls Alliance</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="dashboard">
-      <div class="column left-col">
-        <div class="progress-section">
-          <h2>✨ พลังเวทแห่งจักรวาล ✨</h2>
-          <h1 id="scoreDisplay">0</h1>
-          <p>อัตราการผลิต: <span id="rateDisplay">0</span> / วินาที</p>
+      <div class="column main-col">
+        <h2>The Powerpuff Girls HQ</h2>
+        <div class="main-top">
+          <div class="progress-section">
+            <h2>Chemical X Energy</h2>
+            <h1 id="scoreDisplay">0</h1>
+            <p>Auto Power: <span id="rateDisplay">0</span> / sec</p>
+          </div>
+
+          <div class="status-box">
+            <p>Power per Click</p>
+            <h3 id="clickPowerDisplay">1 Power / Click</h3>
+          </div>
         </div>
 
         <div class="target-container">
           <button id="clickButton" class="target-btn">
-            <img src="sailormoon.png" alt="Sailor Moon" />
+            <img src="power-btn.png" alt="Powerpuff Girls" />
           </button>
         </div>
       </div>
 
-      <div class="column middle-col">
-        <h2>Magical Girls Alliance</h2>
-        <h3>สมาพันธ์สาวน้อยเวทมนตร์</h3>
-        <div class="status-box">
-          <p>พลังเวทต่อการร่ายมนต์ 1 ครั้ง</p>
-          <h3 id="clickPowerDisplay">1 หน่วย / คลิก</h3>
-        </div>
-      </div>
-
       <div class="column right-col">
-        <h2>อัปเกรดพลัง</h2>
+        <h2>Team Upgrades</h2>
 
         <button id="buyUpgrade1" class="upgrade-btn">
           <div class="upgrade-info">
-            <strong>สารเคมี X (Chemical X)</strong>
-            <p>+1 พลังร่ายมนต์ (ต่อคลิก)</p>
+            <strong>Chemical X Boost</strong>
+            <p>+1 power per click</p>
           </div>
-          <div class="upgrade-cost"><span id="cost1">20</span> พลังเวท</div>
+          <div class="upgrade-cost"><span id="cost1">20</span> energy</div>
         </button>
 
         <button id="buyUpgrade2" class="upgrade-btn">
           <div class="upgrade-info">
-            <strong>คทาแห่งดวงดาว (Star Wand)</strong>
-            <p>+1 ออโต้ / วินาที</p>
+            <strong>Blossom’s Leadership</strong>
+            <p>+1 power per second</p>
           </div>
-          <div class="upgrade-cost"><span id="cost2">65</span> พลังเวท</div>
+          <div class="upgrade-cost"><span id="cost2">65</span> energy</div>
         </button>
 
         <button id="buyUpgrade3" class="upgrade-btn">
           <div class="upgrade-info">
-            <strong>แมวเหมียวลูน่า (Luna's Guidance)</strong>
-            <p>+5 ออโต้ / วินาที</p>
+            <strong>Bubbles’ Joy</strong>
+            <p>+5 power per second</p>
           </div>
-          <div class="upgrade-cost"><span id="cost3">200</span> พลังเวท</div>
+          <div class="upgrade-cost"><span id="cost3">200</span> energy</div>
         </button>
 
         <button id="buyUpgrade4" class="upgrade-btn">
           <div class="upgrade-info">
-            <strong>โคลว์การ์ด (Clow Cards)</strong>
-            <p>+20 ออโต้ / วินาที</p>
+            <strong>Buttercup’s Strength</strong>
+            <p>+20 power per second</p>
           </div>
-          <div class="upgrade-cost"><span id="cost4">800</span> พลังเวท</div>
+          <div class="upgrade-cost"><span id="cost4">800</span> energy</div>
         </button>
 
         <button id="buyUpgrade5" class="upgrade-btn">
           <div class="upgrade-info">
-            <strong>พลังมิตรภาพทะลุมิติ! (Bestfriend's Power)</strong>
-            <p>+100 ออโต้ / วินาที</p>
+            <strong>Professor Utonium’s Lab</strong>
+            <p>+100 power per second</p>
           </div>
-          <div class="upgrade-cost"><span id="cost5">2500</span> พลังเวท</div>
+          <div class="upgrade-cost"><span id="cost5">2500</span> energy</div>
         </button>
       </div>
     </div>
