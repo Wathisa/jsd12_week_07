@@ -10,7 +10,7 @@ body {
   letter-spacing: 0.3px;
   color: #333;
 
-  background-image: url("wallpaper.jpg");
+  background-image: url("wallpaper2.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -39,7 +39,7 @@ h2 {
   border-radius: 20px;
 
   background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(10px);
 
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -49,19 +49,37 @@ h2 {
 
 /* --- ตกแต่งคอลัมน์หลักฝั่งซ้าย --- */
 .main-col {
-  flex: 2;
+  flex: 1;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  justify-content: space-between;
+  justify-content: flex-start;
+  padding-top: 40px;
+}
+
+.main-col h2 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.title-img img {
+  width: 260px;
 }
 
 .progress-section h1 {
   font-size: 60px;
-  margin: 10px 0;
-  color: #e91e63;
+  color: #2a84ce;
+  margin: 0;
+}
+
+.stats-row {
+  display: flex;
+  gap: 15px;
+  font-size: 14px;
+  opacity: 0.7;
+  justify-content: center;
 }
 
 .main-top {
@@ -70,19 +88,18 @@ h2 {
 
 .target-container {
   width: 100%;
-  padding: 40px;
-  border-radius: 10px;
+  padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* --- ส่วนปุ่ม Sailor moon --- */
+/* --- ส่วนปุ่ม powerpuff girls --- */
 .target-btn {
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   background-color: transparent;
-  border: 4px solid #68208d;
+  border: 2px solid #85d8de;
   border-radius: 50%;
   padding: 0;
   cursor: pointer;
@@ -134,11 +151,8 @@ h2 {
 }
 
 .status-box {
-  border: 2px solid #f8bbd0;
   padding: 15px;
-  border-radius: 8px;
   margin-top: 20px;
-  background-color: #fffcfd;
 }
 
 /* --- ตกแต่งคอลัมน์ขวา --- */

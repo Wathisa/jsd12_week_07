@@ -7,30 +7,31 @@
       href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <title>Magical Girls Alliance</title>
+    <title>The Powerpuff Girls Clicker Game</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="dashboard">
       <div class="column main-col">
-        <h2>The Powerpuff Girls HQ</h2>
-        <div class="main-top">
-          <div class="progress-section">
-            <h2>Chemical X Energy</h2>
-            <h1 id="scoreDisplay">0</h1>
-            <p>Auto Power: <span id="rateDisplay">0</span> / sec</p>
-          </div>
-
-          <div class="status-box">
-            <p>Power per Click</p>
-            <h3 id="clickPowerDisplay">1 Power / Click</h3>
-          </div>
-        </div>
-
+        <h1 class="title-img">
+          <img src="pp-logo.png" alt="The Powerpuff Girls" />
+        </h1>
         <div class="target-container">
           <button id="clickButton" class="target-btn">
             <img src="power-btn.png" alt="Powerpuff Girls" />
           </button>
+        </div>
+        <div class="main-top">
+          <div class="progress-section">
+            <h2>Chemical X Energy</h2>
+            <h1 id="scoreDisplay">0</h1>
+          </div>
+
+          <div class="stats-row">
+            <p>Auto Power: <span id="rateDisplay">0</span> / sec</p>
+            <p>|</p>
+            <p>Power: <span id="clickPowerDisplay">1</span></p>
+          </div>
         </div>
       </div>
 
