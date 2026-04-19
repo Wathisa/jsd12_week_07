@@ -80,6 +80,21 @@ body {
   width: 100%;
 }
 
+.main-bottom {
+  width: 100%;
+  font-size: 12px;
+  margin-top: auto;
+  padding-top: 10px;
+  padding: 10px 14px;
+  color: rgba(63, 63, 63, 0.8);
+  line-height: 1.4;
+  background: rgba(255, 255, 255, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 12px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
 .target-container {
   width: 100%;
   padding: 10px;
@@ -173,13 +188,16 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid #f8bbd0;
+  border: 2px solid transparent;
   padding: 30px 50px 30px 50px;
   border-radius: 8px;
   margin-bottom: 15px;
   cursor: pointer;
   text-align: left;
-  transition: all 0.2s;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    filter 0.2s ease;
   font-weight: 500;
   font-size: 16px;
 }
@@ -193,12 +211,6 @@ body {
 .upgrade-cost {
   font-weight: bold;
   color: #e91e63;
-}
-
-.upgrade-btn:hover:not(:disabled) {
-  border-color: #f06292;
-  background-color: #fff0f5;
-  transform: scale(1.02);
 }
 
 .upgrade-btn:disabled {
@@ -216,42 +228,67 @@ body {
 /* --- ใส่ภาพพื้นหลังให้กล่องพลัง --- */
 /* Chemical X Boost */
 #buyUpgrade1 {
+  border-color: #fbe263;
   background-image: url("chemicalx.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
+#buyUpgrade1:hover:not(:disabled) {
+  filter: brightness(1.03);
+}
+
 /* Blossom’s Leadership */
 #buyUpgrade2 {
+  border-color: #fec8e0;
   background-image: url("blossom.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
+#buyUpgrade2:hover:not(:disabled) {
+  filter: brightness(1.03);
+}
+
 /* Bubbles’ Joy */
 #buyUpgrade3 {
+  border-color: #9adefe;
   background-image: url("bubbles.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
+#buyUpgrade3:hover:not(:disabled) {
+  filter: brightness(1.03);
+}
+
 /* Buttercup’s Strength */
 #buyUpgrade4 {
+  border-color: #8ee698;
   background-image: url("buttercup.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
+#buyUpgrade4:hover:not(:disabled) {
+  filter: brightness(1.03);
+}
+
 /* Professor Utonium’s Lab */
 #buyUpgrade5 {
+  border-color: #dbadf7;
   background-image: url("professor.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+#buyUpgrade5:hover:not(:disabled) {
+  filter: brightness(1.03);
 }
 
 @media (min-width: 641px) and (max-width: 900px) {
@@ -427,5 +464,9 @@ body {
 
   .upgrade-cost {
     font-size: 14px;
+  }
+
+  .main-bottom {
+    display: none;
   }
 }
