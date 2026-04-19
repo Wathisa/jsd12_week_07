@@ -153,11 +153,19 @@ body {
 .right-col {
   flex: 1;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
 }
 
 .right-col h2 {
   font-size: 20px;
   /* color: #167ad1; */
+}
+
+.upgrades-list {
+  flex: 1;
+  min-height: 0;
 }
 
 .upgrade-btn {
@@ -246,23 +254,178 @@ body {
   background-repeat: no-repeat;
 }
 
-@media (max-width: 900px) {
+@media (min-width: 641px) and (max-width: 900px) {
+  body {
+    height: 100dvh;
+    overflow: hidden;
+  }
+
   .dashboard {
-    flex-direction: column;
-    height: auto;
-    min-height: 100vh;
+    height: 100dvh;
+    padding: 12px;
+    gap: 12px;
+    overflow: hidden;
   }
 
   .main-col,
   .right-col {
-    flex: unset;
+    flex: 1;
+    min-height: 0;
+  }
+
+  .main-col {
+    justify-content: center;
+    gap: 10px;
+    padding: 18px;
+  }
+
+  .title-img {
+    margin: 0;
+  }
+
+  .title-img img {
+    width: min(300px, 34vw);
   }
 
   .target-container {
-    padding: 20px 0;
+    padding: 8px 0;
+  }
+
+  .target-btn {
+    width: 170px;
+    height: 170px;
+  }
+
+  .main-col h2 {
+    font-size: 18px;
+  }
+
+  #scoreDisplay {
+    font-size: 48px;
+  }
+
+  .stats-row {
+    gap: 12px;
+    font-size: 13px;
+    flex-wrap: wrap;
+  }
+
+  .right-col {
+    padding: 16px;
+    overflow: hidden;
+  }
+
+  .right-col h2 {
+    margin: 0 0 12px;
+    font-size: 20px;
+  }
+
+  .upgrades-list {
+    overflow-y: auto;
+    padding-right: 6px;
+    -webkit-overflow-scrolling: touch;
   }
 
   .upgrade-btn {
-    padding-left: 120px;
+    padding: 22px 20px;
+    min-height: 96px;
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+
+  .upgrade-info p {
+    font-size: 13px;
+  }
+
+  .upgrade-cost {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    height: 100dvh;
+    overflow: hidden;
+  }
+
+  .dashboard {
+    flex-direction: column;
+    height: 100dvh;
+    padding: 8px;
+    gap: 8px;
+    overflow: hidden;
+  }
+
+  .main-col,
+  .right-col {
+    flex: 1;
+    min-height: 0;
+  }
+
+  .main-col {
+    justify-content: center;
+    gap: 6px;
+    padding: 12px 14px;
+  }
+
+  .title-img {
+    margin: 0;
+  }
+
+  .title-img img {
+    width: min(240px, 70vw);
+  }
+
+  .target-container {
+    padding: 6px 0;
+  }
+
+  .target-btn {
+    width: 148px;
+    height: 148px;
+  }
+
+  .main-col h2 {
+    font-size: 18px;
+  }
+
+  #scoreDisplay {
+    font-size: 42px;
+  }
+
+  .stats-row {
+    gap: 10px;
+    font-size: 12px;
+    flex-wrap: wrap;
+  }
+
+  .right-col {
+    padding: 12px;
+    overflow: hidden;
+  }
+
+  .right-col h2 {
+    margin: 0 0 10px;
+    font-size: 18px;
+  }
+
+  .upgrades-list {
+    overflow-y: auto;
+    padding-right: 4px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .upgrade-btn {
+    padding: 20px 18px;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .upgrade-info p {
+    font-size: 12px;
+  }
+
+  .upgrade-cost {
+    font-size: 14px;
   }
 }
